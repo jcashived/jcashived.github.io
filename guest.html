@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guest Mode</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('/static/kingsize.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 60%;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 2em;
+        }
+        
+        .card {
+            background: transparent;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+        
+        .post-box, .appointment-box {
+            background: transparent;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            background: transparent;
+            color: white;
+        }
+        
+        input, textarea {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        button {
+            background-color: #5e548e;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background-color: #3d348b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Guest Mode</h1>
+        
+        <div class="post-box">
+            <h2>Post a Message</h2>
+            <form method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <textarea name="content" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        
+        <div class="appointment-box">
+            <h2>Book an Appointment</h2>
+            <form action="/appointment" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="date" name="date" required>
+                <input type="time" name="time" required>
+                <textarea name="topics" placeholder="Topics to discuss" required></textarea>
+                <button type="submit">Book</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('/static/fade.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: white; /* Deep blue */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        a {
+            display: inline-block;
+            margin: 15px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #F5EFE6;
+            background-color: #406882; /* Muted blue */
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+        a:hover {
+            background-color: #1A374D; /* Darker blue */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to EchoCare</h1>
+    <a href="/login">Admin Login</a>
+    <a href="/guest">Continue as Guest</a>
+</body>
+</html>
